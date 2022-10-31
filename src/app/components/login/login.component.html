@@ -1,0 +1,36 @@
+
+   <form [formGroup]="form" class="m-5" (ngSubmit)="userLogin()">
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  
+      <div class="form-floating">
+        <input type="text" formControlName="username" 
+        [(ngModel)]="user.username"
+        [ngClass]="{'is-invalid': Username?.errors && Username?.touched, 'is-valid': !Username?.errors && Username?.touched}"
+        class="form-control" id="username" name="username" placeholder="nombre de usuario">
+        <div *ngIf="Username?.errors && Username?.touched">
+            <p *ngIf="Username?.hasError('required')" class="text-danger">
+            El Nombre de usuario es requerido.    
+            </p>
+        </div>
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" formControlName="password"
+        [(ngModel)]="user.password"
+        [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}"
+        class="form-control" id="floatingPassword" placeholder="Password">
+        <div *ngIf="Password?.errors && Password?.touched">
+        <p *ngIf="Password?.hasError('required')" class="text-danger">
+            La contraseña es requerida.    
+        </p> 
+        <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+            La contraseña debe tener  8 o mas caracteres.     
+        </p>         
+        </div>
+        <label for="floatingPassword">Password</label>
+      </div>
+      
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Enviar</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+    </form>
+

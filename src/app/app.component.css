@@ -1,0 +1,7 @@
+.box{     
+        background-image: url('src\assets\images\fondo.jpg');
+        background-repeat: repeat-y;
+        background-repeat: repeat-x;
+        background-attachment: fixed;
+  max-height:100%
+}
