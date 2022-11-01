@@ -3,7 +3,8 @@ export class User {
     username!:String;
     password!:String;
 
-    constructor( name:string,password:string){
-        this.username=this.username;
-        this.password=password;}
+    constructor( username:string,password:string){
+        this.username=username;
+        this.password=password;
+    }
 }

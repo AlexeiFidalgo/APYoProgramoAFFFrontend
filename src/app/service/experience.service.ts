@@ -7,7 +7,7 @@ import { Experience } from '../model/experience';
   providedIn: 'root'
 })
 export class ExperienceService {
-  URL = 'http://localhost:8080/experienciaLaboral';
+  URL = 'https://apyoporogramoaffbackend.herokuapp.com/experienciaLaboral';
   constructor(private httpClient: HttpClient) { }
   
   public verTodo(): Observable<Experience[]>{

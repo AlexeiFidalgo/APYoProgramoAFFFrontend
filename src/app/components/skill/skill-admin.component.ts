@@ -9,7 +9,7 @@ import { SkillService } from 'src/app/service/skill.service';
 })
 export class SkillAdminComponent implements OnInit {
   skill :Skill[]=[];
-  constructor(private skillService: SkillService,
+  constructor(private skillService: SkillService, 
     ) { }
 
   ngOnInit(): void {

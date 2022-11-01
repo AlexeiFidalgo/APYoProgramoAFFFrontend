@@ -8,11 +8,11 @@ import { EducationService } from 'src/app/service/education.service';
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent implements OnInit {
-education:Education = new Education("","","",0,0,"");
+education:Education [];
   constructor(public educationService:EducationService) { }
 
   ngOnInit(): void {
-   // this.educationService.verTodo().subscribe(data=>{this.persona=data});
+    this.educationService.verTodo().subscribe(data=>{this.education=data});
   }
 
 }
