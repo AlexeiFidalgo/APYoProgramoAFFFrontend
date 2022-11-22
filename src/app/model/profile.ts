@@ -8,7 +8,7 @@ export class Profile {
     descripcion?:string;
 
 
-    constructor( id:number,nombre:string,apellido:string,fotoPerfil:string,fotobanner:string,
+    constructor(nombre:string,apellido:string,fotoPerfil:string,fotobanner:string,
         titulo:string,descripcion:string){
             this.nombre=nombre;
             this.apellido=apellido;

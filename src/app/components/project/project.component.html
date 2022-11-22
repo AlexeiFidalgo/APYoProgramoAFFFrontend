@@ -1,35 +1,22 @@
 <div class="card mt-2 mb-5">
   <div class="card-body">
-    <h2>Proyectos  </h2>
-    <div class="container mt-1">
-      <div class="row">
-        <div class="col-11">
-          <div>
-            <h3><a href="https://github.com/AlexeiFidalgo/APYoProgramoAFFFrontend.git" class="link-primary">ArProgramaFronten</a> </h3>
-            <span>Inicio: Febrero 2022  -  Finalización: octubre 2022</span>
-            <p>Parte Frontend del proyecto final de ArPrograma #yoProgramo hecho en angular</p>
-          </div>
+    <h2>Proyectos </h2>
+    <ul class="list-group list-group-flush" *ngFor="let Project of project">
+      <li class="list-group-item">
+        <div class="container mt-1">
+          <div class="row">
+            <div class="col-11">
+              <div>
+                <h3><a href="{{Project.urlProyecto}}" target="_blank" class="link-primary">{{Project.nombre}} </a> </h3>
+                <span>Finalización: {{Project.anoFin}}</span>
+                <p><b>Descripcion: </b><br>{{Project.descripcion}}</p>
+              </div>
 
-        </div>
-        <div class="col-1">
-          
-        </div>
-    </div>
-    </div> 
-    <div class="container mt-1">
-      <div class="row">
-        <div class="col-11">
-          <div>
-            <h3><a href="https://github.com/AlexeiFidalgo/APYoProgramoAFFBackend.git" class="link-primary">ArProgramaBackend</a> </h3>
-            <span>Inicio: Febrero 2022  -  Finalización: octubre 2022</span>
-            <p>Parte Frontend del proyecto final de ArPrograma #yoProgramo hecho en angular</p>
+            </div>
+     
           </div>
-
         </div>
-        <div class="col-1">
-         
-        </div>
-    </div> 
+      </li>
+    </ul>
   </div>
-</div>
 </div>

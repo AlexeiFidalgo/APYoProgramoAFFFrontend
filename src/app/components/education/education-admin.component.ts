@@ -23,6 +23,7 @@ list(){
 
   delete(id?:number){
     if(id!=undefined){
+      console.log(id)
       this.educationService.delete(id).subscribe(data=>{window.location.href="/porfolioAdmin"},err=>alert("no se borro"))
     }  
   }

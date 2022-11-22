@@ -1,1 +1,26 @@
-<p>project-edit works!</p>
+<div class="card mt-5 align-items-center">
+    <h2>ingrese un nuevo proyecto</h2>
+    <form (ngSubmit)="onEdit()" novalidate #f="ngForm">
+  
+      <div class="form-group">
+        <label>Nombre del proyecto </label>
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="project.nombre">
+      </div>
+      <div class="form-group">
+        <label>Descripcion </label>
+        <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="project.descripcion"></textarea>
+      </div>
+      <div class="form-group">
+        <label f>Link del proyecto </label>
+        <input type="text" class="form-control" id="urlProyecto" name="urlProyecto" [(ngModel)]="project.urlProyecto">
+      </div>
+      <div class="form-group">
+  
+        <label>Año de finalizacion</label>
+        <input type="number" class="form-control" id="anoFin" name="anoFin" [(ngModel)]="project.anoFin">
+      </div><br>
+      <button type="submit" class="btn btn-primary">guardar cambios</button>
+      <br> <br>
+        <button type="button" class="btn btn-primary" (click)="goBack()">volver</button>
+    </form>
+  </div>

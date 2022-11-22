@@ -1,1 +1,38 @@
-<p>profile-edit works!</p>
+<div class="card mt-5 align-items-center">
+    <h2>Modificar perfil </h2>
+    <form (ngSubmit)="onEdit()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label >Nombre </label>
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="profile.nombre ">
+           
+        </div>
+        <div class="form-group">
+          <label >Apellido</label>
+          <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="profile.apellido" >
+        </div>
+        <div class="form-group">
+            <label >Titulo</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="profile.titulo" >
+          </div>
+          <div class="form-group">
+            <label >Descripcion </label>
+            <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="profile.descripcion" ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Foto de perfil</label>
+            <input type="file" class="form-control" id="fotoPerfil" name="fotoPerfil" [(ngModel)]="profile.fotoPerfil" (change)="uploadImage" 
+            accept=".jpg, .jpeg , .png">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Foto del banner</label>
+            <input type="file" class="form-control" id="fotobanner" name="fotobanner" [(ngModel)]="profile.fotobanner" (change)="uploadImage" 
+            accept=".jpg, .jpeg , .png">
+          </div>
+          
+
+          <div class="imagen"><img [src]="imageService.url" width="100px"> </div>
+        <button type="submit" class="btn btn-primary">guardar cambios</button>
+      </form>
+    </div>
+    

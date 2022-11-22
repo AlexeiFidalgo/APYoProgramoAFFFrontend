@@ -7,7 +7,8 @@ import { User } from '../model/user';
   providedIn: 'root'
 })
 export class LoginService {
-  URL = 'https://apyoporogramoaffbackend.herokuapp.com/login';
+  URL = 'https://apyoporogramoaffbackend.herokuapp.com/usuario/login';
+  
   constructor(private httpClient: HttpClient) { }
 
   loginUser(user: User):Observable<object>{

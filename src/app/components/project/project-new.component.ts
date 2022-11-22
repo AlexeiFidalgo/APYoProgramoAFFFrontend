@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Project } from 'src/app/model/project';
+import { ProjectService } from 'src/app/service/project.service';
 
 @Component({
   selector: 'app-project-new',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectNewComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private router: Router, private projectService: ProjectService) { }
+  project: Project = new Project("", "", "", "", 0)
   ngOnInit(): void {
   }
 
+  onCreate(): void {
+
+    this.projectService.nuevo(this.project).subscribe(
+      data => {
+        alert("el proyecto se añadido correctamente");
+        this.router.navigate(['/porfolioAdmin']);
+      }, err => {
+        alert("falló");
+        this.router.navigate(['/porfolioAdmin']);
+      }
+    )
+  }
+  goBack(){
+    this.router.navigate(['/porfolioAdmin'])
+  }
 }

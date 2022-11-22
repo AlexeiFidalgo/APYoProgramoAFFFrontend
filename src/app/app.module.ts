@@ -29,6 +29,10 @@ import { EducationNewComponent } from './components/education/education-new.comp
 import { HeaderAdminComponent } from './components/header/header-admin.component';
 import { ProfileAdminComponent } from './components/profile/profile-admin.component';
 import { EducationEditComponent } from './components/education/education-edit.component';
+import { ExperienceEditComponent } from './components/experience/experience-edit.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 
@@ -46,6 +50,7 @@ import { EducationEditComponent } from './components/education/education-edit.co
     ExperienceComponent,
     ExperienceAdminComponent,
     ExperienceNewComponent,
+    ExperienceEditComponent,
     SkillComponent,
     LoginComponent,
     FooterComponent,
@@ -66,7 +71,9 @@ import { EducationEditComponent } from './components/education/education-edit.co
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
 
   ],
   providers: [],

@@ -1,1 +1,36 @@
-<p>experience-edit works!</p>
+<div class="card mt-5 align-items-center">
+    <h2>Modificar experiencia</h2>
+    <form (ngSubmit)="onEdit()" novalidate #f="ngForm">
+       
+        <div class="form-group">
+          <label >Nombre de la empresa </label>
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="experience.nombre" >
+        </div>
+        <div class="form-group">
+            <label >Puesto de trabajo </label>
+            <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="experience.puesto" >
+          </div>
+          <div class="form-group">
+            <label >Descripcion </label>
+            <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="experience.descripcion" ></textarea>
+          </div>
+          <div class="form-group">
+            <label f>Tipo de empleo </label>
+            <input type="text" class="form-control" id="tipoEmpleo" name="tipoEmpleo" [(ngModel)]="experience.tipoEmpleo" >
+          </div>
+          <div class="form-group">
+            <label f>año de inicio</label>
+            <input type="number" class="form-control" id="anoInicio" name="anoInicio" [(ngModel)]="experience.anoInicio" >
+          </div>
+          <div class="form-group">
+            <label >año de finalizacion</label>
+            <input type="number" class="form-control" id="anoFin" name="anoFin" [(ngModel)]="experience.anoFin" >
+          </div>
+          <br>
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+        <br> <br>
+        <button type="button" class="btn btn-primary" (click)="goBack()">volver</button>
+      </form> 
+    </div>
+    
+    

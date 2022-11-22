@@ -1,1 +1,32 @@
-<p>skill-new works!</p>
+<div class="card mt-5 align-items-center">
+    <h2>ingrese un nueva habilidad</h2>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+  
+      <div class="form-group">
+        <label>Nombre de habilidad </label>
+        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="skill.nombre">
+      </div>
+     
+      <div class="form-group">
+        <label >tipo de habilidad </label>
+        <select class="form-control " id="tipoHabilidad" name="tipoHabilidad" [(ngModel)]="skill.tipoHabilidad">
+    <option value="hard">Hard</option>
+    <option value="soft">Soft</option>
+    <option value="language">language</option>
+  </select>
+      </div>
+      <div class="form-group">
+
+  
+        <label>Porcentaje de conocimiento </label>
+        <input type="number" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje">
+      </div>
+      
+      
+      <br>
+      <button type="submit" class="btn btn-primary">Agregar habilidad</button>
+      <br> <br>
+        <button type="button" class="btn btn-primary" (click)="goBack()">volver</button>
+    </form>
+    
+  </div>

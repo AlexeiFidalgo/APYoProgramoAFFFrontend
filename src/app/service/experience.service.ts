@@ -27,6 +27,6 @@ export class ExperienceService {
   }
   
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
+    return this.httpClient.delete<any>(this.URL + `/borrar/${id}`);
   }
 }

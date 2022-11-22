@@ -7,7 +7,7 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  URL = 'http://localhost:8080/habilidad';
+  URL = 'https://apyoporogramoaffbackend.herokuapp.com/habilidad';
   constructor(private httpClient: HttpClient) { }
   
   public verTodo(): Observable<Skill[]>{

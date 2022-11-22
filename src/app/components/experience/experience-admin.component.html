@@ -14,11 +14,12 @@
           <div class="container mt-1">
             <div class="row">
               <div class="col-1">
-              
+               
               </div>
               <div class="col-10">
                 <h3>{{Experience.puesto}} en {{Experience.nombre}}</h3>
                 <h6>Desde el año {{Experience.anoInicio}} hasta {{Experience.anoFin}} </h6>
+                <p><b>Descripcion del trabajo: </b><br>{{Experience.descripcion}}</p>
               </div> 
               <div class="col-1 ">
                 <button type="button" routerLink="/experienceEdit/{{Experience.id}}" class="btn btn-primary rounded-circle"><svg xmlns="http://www.w3.org/2000/svg"
