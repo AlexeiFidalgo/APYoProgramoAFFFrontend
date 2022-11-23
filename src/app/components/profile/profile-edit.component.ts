@@ -37,16 +37,25 @@ export class ProfileEditComponent implements OnInit {
     this.profileService.modificar(id, this.profile).subscribe(
       data => {
         this.router.navigate(['/porfolioAdmin']);
+        console.log(this.profile.fotoPerfil)
       }, err => {
         alert("hubo un error al modificar ");
         this.router.navigate(['/porfolioAdmin']);
       }
     )
   }
-  uploadImage($event:any){
+  uploadImagePerfil($event:any){
     const id = this.activatedRouter.snapshot.params['id'];
     const name = "perfil_" + id;
     this.imageService.uploadImage($event,name);
     console.log("uploadImage okay")
+    
+  }
+  uploadImageBanner($event:any){
+    const id = this.activatedRouter.snapshot.params['id'];
+    const name = "banner_" + id;
+    this.imageService.uploadImage($event,name);
+    console.log("uploadImage okay")
+    
   }
 }
