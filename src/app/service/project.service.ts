@@ -7,7 +7,7 @@ import { Project } from '../model/project';
   providedIn: 'root'
 })
 export class ProjectService {
-  URL = 'https://apyoporogramoaffbackend.herokuapp.com/proyecto';
+  URL = 'https://apyoprogramoaffbackend.onrender.com/proyecto';
   constructor(private httpClient: HttpClient) { }
   
   public verTodo(): Observable<Project[]>{

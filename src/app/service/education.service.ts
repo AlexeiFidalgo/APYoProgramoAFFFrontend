@@ -7,7 +7,7 @@ import { Education } from '../model/education';
   providedIn: 'root'
 })
 export class EducationService {
-URL = 'https://apyoporogramoaffbackend.herokuapp.com/educacion';
+URL = 'https://apyoprogramoaffbackend.onrender.com/educacion';
 constructor(private httpClient: HttpClient) { }
 
 public verTodo(): Observable<Education[]>{

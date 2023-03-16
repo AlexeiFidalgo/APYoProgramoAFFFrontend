@@ -7,7 +7,7 @@ import { Profile } from '../model/profile';
   providedIn: 'root'
 })
 export class ProfileService {
-  URL = 'https://apyoporogramoaffbackend.herokuapp.com/persona';
+  URL = 'https://apyoprogramoaffbackend.onrender.com/persona';
   constructor(private httpClient: HttpClient) { }
   
   public verTodo(): Observable<Profile[]>{
